@@ -1,0 +1,138 @@
+<!-- 地球 -->
+<div class="earth-box">
+    <div class="animate-box-begin">
+        <img src="css/img/glass-cloud.png" alt="cloud" class="glass-cloud1">
+        <img src="css/img/glass-cloud.png" alt="cloud" id="glass-cloud2">
+    </div>
+    <div class="animate-box-end">
+        <img src="css/img/glass-cloud.png" alt="cloud" class="glass-cloud1">
+        <img src="css/img/cloud.png" alt="cloud" id="cloud">
+    </div>
+</div>
+<!-- css -->
+body
+{
+font-family: 'Microsoft Yahei', Helvetica, Arial, sans-serif;
+overflow: hidden;
+margin: 0;
+padding: 0;
+font-size: 1em;
+}
+.earth-box
+{
+/*overflow: hidden;*/
+width: 25rem;
+height: 25rem;
+margin: 6.25rem;
+
+border-radius: 50%;
+background: url(img/bg-earth.png) no-repeat center center;
+background-size: 28.125rem;
+}
+.animate-box-begin
+{
+position: relative;
+width: 25rem;
+height: 12.5rem;
+-webkit-animation: earth-rotate 8s  infinite ;
+animation-timing-function: linear;
+}
+.animate-box-begin img
+{
+position: relative;
+width: 21.875rem;
+height: 21.875rem;
+}
+.animate-box-end img
+{
+position: relative;
+width:12.8125rem;
+height:12.8125rem;
+}
+#glass-cloud2
+{
+left: 8.0625rem;
+width: 6.25rem;
+height: 6.25rem;
+}
+.animate-box-end
+{
+position: relative;
+top: -12.5rem;
+left: 12.5rem;
+width: 25rem;
+height: 12.5rem;
+-webkit-animation: earth-rotate-end 6s  infinite ;
+animation-timing-function: linear;
+}
+#cloud
+{
+top: -12.5rem;
+}
+@keyframes earth-rotate
+{
+0%
+{
+left: -24.25rem;
+}
+100%
+{
+left:26.125rem;
+}
+}
+@keyframes earth-rotate-end
+{
+0%
+{
+left: -40rem;
+}
+100%
+{
+left: 25.125rem;
+}
+}
+<!-- line -->
+<!-- horizen -->
+<div class="lineH"></div>
+<!-- vertical  -->
+<div class="lineV"></div>
+<!-- css -->
+.lineH{
+position: absolute;
+top: 5em;
+width:100%;
+height: 2px;
+background-color: #000;
+-webkit-animation:fadeInUpBig 1s ease-out;
+}
+.lineV{
+position: absolute;
+left: 2em;
+width: 2px;
+height: 100%;
+background-color: #558766;
+-webkit-animation:fadeInLeftBig 1s;
+}
+@-webkit-keyframes fadeInUpBig {
+0% {
+opacity: 0;
+-webkit-transform: translate3d(0,2000px, 0);
+transform: translate3d(0, 2000px, 0);
+}
+100%{
+opacity: 1;
+-webkit-transform: none;
+transform: none;
+}
+}
+@-webkit-keyframes fadeInLeftBig {
+0% {
+opacity: 0;
+-webkit-transform: translate3d(2000px, 0, 0);
+transform: translate3d(2000px, 0, 0);
+}
+100% {
+opacity: 1;
+-webkit-transform: none;
+transform: none;
+}
