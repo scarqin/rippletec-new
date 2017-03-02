@@ -10,7 +10,7 @@ z-index: 6  page-3-box page-4-box
 {
     html
     {
-        font-size: 18px;
+        font-size: 15px;
     }
 }
 
@@ -25,9 +25,6 @@ body
     padding: 0;
 
     background-color: #053240;
-}
-.blind{
-    visibility:hidden;
 }
 .hidden
 {

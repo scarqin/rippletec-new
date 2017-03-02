@@ -72,7 +72,7 @@ $(function() {
 	};
 
 	function TextShow(obj, show) {
-		obj.on('tap', function() {
+		obj.on('touchend', function() {
 			$('.hidden-page').removeClass('hidden slow-2-out');
 			show.addClass('slow-2-show');
 			show.addClass('show');
@@ -89,7 +89,7 @@ $(function() {
 	TextShow($('.pic-design'), $('.design'));
 	TextShow($('.pic-backstage'), $('.backstage'));
 
-	$(".hidden-page").on("tap", function() {
+	$(".hidden-page").on("touchend", function() {
 		$('.hidden-page').addClass('slow-2-out');
 		setTimeout(function() {
 			$('.hidden-page').addClass('hidden');
@@ -99,7 +99,7 @@ $(function() {
 
 	})
 
-	$(".sign").on("tap", function() {
+	$(".sign").on("touchend", function() {
 		location.href = "http://www.rippletec.net/bm2016/"
 	})
 })
